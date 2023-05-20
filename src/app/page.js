@@ -1,95 +1,66 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client";
+import { Box, Flex, Link } from "@chakra-ui/react";
+import Banner from "./components/Banner";
+import Body1 from "./components/Body1";
+import Body2 from "./components/Body2";
+import Body3 from "./components/Body3";
+import Body4 from "./components/Body4";
+// import Body5 from "./components/Body5";
+import Body6 from "./components/Body6";
+import Body7 from "./components/Body7";
+import Body8 from "./components/Body8";
+import Body9 from "./components/Body9";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import NavTab from "./components/NavTab";
+import "./globals.css";
 
-export default function Home() {
+function Home() {
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+    <Flex flexDirection={"column"} alignItems="center" w="100vw">
+      <Header />
+      <Banner />
+      <NavTab />
+      <Body1 />
+      <Body2 />
+      <Body3 />
+      <Body4 />
+      {/* <Body5 /> */}
+      <Body6 />
+      <Body7 />
+      <Body8 />
+      <Body9 />
+      <Footer />
+      {/* <Show breakpoint="(min-width: 1000px)"> */}
+        <Flex
+          flexDirection={"column"}
+          gap="10px"
+          position="fixed"
+          right={"20px"}
+          bottom="10%"
         >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+          <Link href="#footer">
+            <Box w='80px' h='40px' bgImg={`./img/header1.png`} bgRepeat="no-repeat" backgroundSize="contain"bgPosition={"center"}/>
+          </Link>
+          <Link href="tel:1544-5088">
+           
+          <Box w='80px' h='40px' bgImg={`./img/tell.png`} bgRepeat="no-repeat" backgroundSize="contain" bgPosition={"center"}/>
+          </Link>
+          <Link href="https://blog.naver.com/y_oungh91/222960548251" target={"_blank"}>
+          <Box w='80px' h='40px' bgImg={`./img/blog.png`} bgRepeat="no-repeat" backgroundSize="contain" bgPosition={"center"}/>
+          </Link>
+          <Link href="https://soomgo.com/profile/users/8619113" target={"_blank"}>
+          <Box w='80px' h='40px' bgImg={`./img/review.png`}bgRepeat="no-repeat" backgroundSize="contain"bgPosition={"center"}/>
+          </Link>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+          <Link href="https://open.kakao.com/o/sbFoolxe" target={"_blank"}>
+          <Box w='80px' h='40px' bgImg={`./img/kakao.png`} bgRepeat="no-repeat" backgroundSize="contain" bgPosition={"center"}/>
+          </Link>
+        </Flex>
+      {/* </Show> */}
+    </Flex>
+  );
 }
+
+export default Home;
